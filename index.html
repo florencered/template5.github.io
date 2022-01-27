@@ -1,0 +1,109 @@
+<!DOCTYPE html> <!--Declaring the type of document-->
+<html>
+<!--the divs should be declared by different divs in mind-->	
+<head>
+	<meta charset="UTF-8"> <!--gives information about the website/blog-->
+	<meta name="blog" content="landing page">
+	<meta name="owned by" content="template"> 
+	<meta name="keywords" content="HTML, CSS,landing,resolutions,template">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--be sure to use this welse will face isssues while rendering-->
+	<title>responsive template</title><!--comes as the website name-->
+	<link rel="stylesheet" type="text/css" href="landing.css">
+</head>	
+<body class="body">
+	<div class="wrapper"> <!--the whole conrent including headre,main content and footer grid-->
+		<nav class='navbar'> <!--for the navborder-->
+			<ul><!--declare unordered list-->
+				<li> <!--orderd list wrapping the tag,declare list items-->
+					<a href="#" class='subheading'>Home</a> <!--anchor tag carries the hhtps links and we can put names/images in front of the tag-->
+				</li>
+				<li> 
+					<a href="#" class='subheading'>Contact Us</a>
+				</li>		
+			    <li> 
+			    	<a href="#" class='subheading'>Services</a>
+				</li>
+				<li>
+					<a href="#" class='subheading'> <!--anchor tag is not self closing-->Know More</a>
+				</li>	
+			</ul> 
+		</nav> <!--this will be put up as a grid in future-->
+		<section class="topgrid"> <!--will contain the top-most grid section-->
+				<header class='showcase'> <!--the showcase picture div-->                   
+					<h1>Welcome to <em>Geeky Noobs</em>!!</h1> <!--the content inside the showcase div-->
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p> 
+					<a href="#" class='btn' id='read'>Read More</a> <!--good option to declare class side by side--> 
+					
+				</header> <!--the showcase image and the content inside it,header is a div,it shouldnt be containing-->
+				<div class='topbox1'> <!--header,topbox1 and topbox2 are diff div elemnts of the grid container top-grid,it is essentisal to ident them long the same line-->
+					<h2>Free Courses</h2>
+					<p>click on this link and avail it now just for $24!</p> 
+					<a href="#" class='btn'>Avail Now!!</a> <!--dead link and artificially creating a button-->
+				</div> 
+				<div class='topbox2'> 
+					<h2>Premium Membership</h2>
+					<p>get it now</p>  
+					<a href="#" class='btn' id='btn2'>Become one!!</a> 	
+			    </div>
+		</section>
+		<section class="main-content-box"><!--another section,another piece or part of the website hev=nce section-->
+			<div class='intro'>
+				<h2>Introducing to you the one and only G-Noobathon!!</h2>
+				<img src="https://media.istockphoto.com/photos/girls-in-computer-lab-coding-on-laptops-picture-id657110928?b=1&k=20&m=657110928&s=170667a&w=0&h=eN-YC97qfg4U333WdmyYXfu5zcVavcR0i2QnVTusTBU=" alt='coding hackathon' height="200px" width="500px" id='geekathon'> <!--img,the self closing tag with alternative text and height and width defined,copied form copy image address on the website-->
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			
+			<h2 class='box-wrapper'>Let's Check Out the Prizes</h2> <!--another section of the website which i would be enclosing in another grid-->
+			<div class='boxes'> <!--declare an overall div for all the cotent-->
+				<div class='box'> <!--would declare indivisual boxes as grids hence puttting them in divs,so that it can be flexible when viewport dimensions are changed,css grid is 2dimensional,flexbox is 1 dimensional,grid is for whole layout GRID IS NOT USED RENDERING,just used for easy positioning,flebox is for using a particular row and alignment model--> 
+					<h3>First Prize</h3><!--no need to declare this as a grid,as these are heading are alreday inside a grid box,instaed we could use flexbox here-->					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						0-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				    	onsequat.</p> 
+				</div>
+				<div class='box'>
+					<h3>Second Prize</h3> 
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					    onsequat.</p> 
+			    </div>
+			    <div class='box'>
+					<h3>Third Prize</h3> 
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					    onsequat.</p> 
+			    </div>
+			    <div class='box'>
+			    	<h3>Consolation Prize</h3> 
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					    onsequat.</p> 
+			    </div>
+			</div>
+		</section>
+		<footer class='footer'><!--will be putting this in another grid-->
+			<p> Connect with us on:</p>
+			<a href="https://www.instagram.com">
+				<img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aW5zdGFncmFtJTIwbG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=60&q=60"><!--enclosing an image inside a link using the anchor tag-->
+			</a>
+			<a href="https://www.discord.com">
+				<img src="https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzY29yZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=60&q=60">
+			</a>
+			<a href="https://www.twitter.com">
+				<img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHdpdHRlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=60&q=60">
+			</a>
+			<div id='copyright'>&copy; 2021geekynoobspvt.ltd</div> <!--the copyright tag-->
+
+		</footer>												
+	</div><!--the wrapper div-->
+</body><!--body element-->
+</html> <!--dont forget to enclose everything within the html root element tag-->

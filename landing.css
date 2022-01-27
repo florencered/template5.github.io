@@ -1,0 +1,367 @@
+:root{ /*we define variables which we can calll anytime*/
+	--primary:#D3D3D3; /*syntax of declaring variables --var: anything we want;*/
+	--dark:#333;
+	--shadow: 0px 1px 5px grey; /*declaring the box-shadow we use,the x-axis span,y-axis span,blur effect,shoadow colour*/
+} 
+html{ /*the root element,the rem elemnts are defined wrt  the size of this root tag which is 16px*/
+	box-sizing: border-box;/*so that padding doesnt fuck things up,if we set the box sizing to border-box,the computer takes the padding into account to whie considering the height and width so we can rendre with ease*/
+	/*a good habit,box sizing tells the computer whther padding shoiuld be included as a part of actual height and width of viewport,by default padding is not included*/
+}
+
+body{
+	
+	line-height: 1.6; /*height of the whole text*/
+	margin-top:0px; /*at a distance of 0px from the top of the viewport,altho some border is always there*/
+}
+
+.btn{
+	background-color: var(--dark); /*creates a background behind the text*/
+	color: white;
+	padding: 0.6rem 1.3rem; /*top and bottom,left and right*//*ideal size for creating a button*//*also,padding is the dist between the text and its bg colour borderrs*/
+	text-decoration: none; /*remove the underlines from the link/we get the plain text ,colour might change*/
+	border-radius:5%; /*bends the edges of the bg color aby a radius of 5px,50% represents a circle with a squiare box and oval with a rectangular box*/
+}
+.btn:hover{ 
+	font-size: larger; 
+
+} 
+img{
+	max-width: 100%; /*makes sure the image never goes out of the container*/
+	height:auto; /*the image would always mantain it,s aspect ratio by changing its dimensions according to diffrebet viewport sizes*/
+}
+.wrapper{
+	display:grid; /*will put the whole content inside a grid box */
+	
+} 
+.navbar ul{ /*accessing the unordered lisst of the navbar*/  
+	display:grid; /*for making the website responisve and making task easier*/ 
+	grid-template-columns: repeat(4,1fr); /*declaring 4 columns side by side covering all space,will cahnge according to the viewport height*/
+	list-style: none;/*removes the bullets of ul*/ /*1fr means 1 fraction of the available grid*/
+	background-color: #3D4849; 
+	height: 50%; /*50% height of the parent (wrapper in this case)element*/
+	width:100%; /*the dimensions of the background colour*/
+	padding-left: 5px;
+	padding-top: 25px;
+	padding-bottom:2px;
+
+
+} 
+.subheading{
+	color:white;
+	text-decoration: none; /*removing the undrelines from the links*/ 
+	border-right: solid; /*specifying surrounding borders*/
+	border-left: solid; 
+	padding-left: 5px; 
+	padding-right: 5px;
+	text-transform: uppercase; /*text-transform is used to convert the letter type*/
+	text-align: right;
+}
+.subheading:hover{ 
+	border-top: solid;
+	border-bottom: solid;
+	padding-top: 5px; 
+	padding-bottom: 5px; /*apply the effect only when we hover the mouse over there*/
+}
+.topgrid{
+	display:grid; 
+	grid-template-columns: 1fr 0.5fr 0.5fr; /* the top grid is split into 3 columnsof size(1fraction of available space,0.5fr,0.5fr) and 2 rows(1fr,0.5fr)*/
+	grid-template-rows: 1fr 0.5fr;
+	margin-top: 10px;  
+	/*background-color: pink; */
+}
+.showcase{ 
+	background: url(showcasebg.jfif);
+	text-align:center; 
+	background-size: cover;
+	background-position: center; 
+	display:flex; /*puts items side by side*/
+	/*flex-wrap: wrap;*/
+	flex-direction: column; /*will put items one beneath the other*/
+	align-items: start; /*will fix it to the start*/
+	justify-content: center; /*will bring it vertically towrads the center*/
+	padding:3rem; /*else the font will stick to the image*/
+	box-shadow: var(--shadow); /*for the shadow effect*/ 
+	grid-column-start: 1; /*by calling the variable*/
+	grid-column-end: 3; 
+	grid-row-start: 1; 
+	grid-row-end: 3; /*column and row staring and ending lines*/
+} 
+.showcase h1{
+	font-size: 2.5rem; 
+	color: white; 
+	opacity: 0.7; 
+}
+.showcase p{
+	font-size: 1rem;
+	color: white; 
+	opacity: 0.7; 
+	margin-top: 0.1rem;
+}
+.topbox1{
+	margin-bottom: 0.5rem; 
+	background-color: var(--primary); 
+	text-align: center; 
+	height: 50vh; 
+	box-shadow: var(--shadow);	
+	display: grid; 
+	align-content: center; /*up and down positioning,cross axis*/
+	justify-content: center; /*left and right, main axis*/ 
+	padding: 1rem; 
+	margin-left: 0.5rem; 
+} 
+
+.topbox2{
+	margin-left: 0.5rem; 
+	background-color: var(--primary); 
+	text-align: center; 
+	height: 50vh; 
+	box-shadow: var(--shadow); 
+	display: grid; 
+	align-content: center; 
+	justify-content: center; 
+	padding: 1rem;
+
+} 
+.intro{
+	display: grid;
+	margin-top: 20px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 2fr 0.1fr; 
+	grid-row-gap:5vw;
+	
+	
+} 
+.intro h2{
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 1; 
+	margin-bottom:20px; 
+	
+	font-size: xx-large; /*relative font size*/
+}
+#geekathon{
+	display: block;
+	margin-top:2px; 
+	box-shadow: var(--shadow);
+	aspect-ratio:16/9; 
+	grid-column-start: 2;
+	grid-column-end: 4; 
+	margin-bottom:1px; 
+
+
+
+
+} 
+.intro p{ 
+	grid-column-start: 1;
+	grid-column-end: 5; 
+	grid-row-start: 3;
+	font-size: large;
+}
+.boxes{
+	display: grid; 
+	grid-template-columns: repeat(
+                auto-fill, minmax(300px, 1fr)); /*auto-fill tries to fill in as many columns as possible,and might change into row and column layout if enough space couldnt be found*/
+	grid-gap: 20px; 
+	padding-left: 2rem;
+	
+} 
+.box-wrapper{
+	font-size: 2rem;
+}
+.boxes h3{
+	font-size: 2rem;
+}
+.box{
+	background-color: var(--primary); 
+	text-align: center; 
+	box-shadow: var(--shadow); 
+	padding: 1rem; 
+	margin-bottom:5rem;
+
+} 
+#btn2{
+	padding: 0.6rem 0.6rem;
+	margin-top: 1rem;
+}
+.footer{
+	background-color: var(--dark);
+	color:white;
+}  
+.footer img{
+	margin-right: 0.1rem;
+	margin-left: 1rem; 
+	border-radius: 5%
+} 
+@media(max-width:1200px){ /*if the media widht is 620px and less*/
+	.wrapper{
+	margin-left:0.1rem;
+	}
+	.navbar ul{ /*auto-fit,the size of each grid needs to specified,it will try to cover the entire space and without changing the fr specified,auto-fill conditions also varied*/
+		padding-bottom:25px;
+		
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		
+	}
+	.showcase{
+		margin-bottom: 1rem;
+	}
+
+	.showcase h1{
+	font-size: 1.5rem;
+	color: white; 
+	opacity: 0.7; 
+	margin-top: 0.1rem;
+    }
+	.subheading{ /*accessing the unordered lisst of the navbar*/ 
+		
+		padding:0.1rem; 
+		border-radius:5%;
+        font-size: small; 
+        width:100%;
+
+	}
+	.subheading: hover{ 
+		padding:2rem;
+		border-top: solid;
+		border-bottom: solid;
+    }
+    .btn{
+	background-color: var(--dark);
+	color: white;
+	padding: 0.1rem 0.1rem; /*ideal size for creating a button*/
+	text-decoration: none; /*remove the underlines fro yhe r=href link*/
+	border-radius: 5%;
+	} 
+	#btn2{
+	padding: 0.1rem 0.1rem;
+	margin-top: 0.1rem;
+	}
+
+    #read{
+    	justify-content: center; /*incase we want alignment of a specific item in a grifd,declare it as a block elemnet and align it*/
+    	text-align: center; 
+    	padding:0.4rem 0.1rem; 
+    	width:50%; 
+    	margin-left: 2.5rem;
+
+    }
+    .topgrid{
+	display:grid; 
+	grid-template-columns: 1fr; /* the top grid is split into 3 columnsof size(1fraction of available space,0.5fr,0.5fr) and 2 rows(1fr,0.5fr)*/
+	grid-template-rows: 1fr 0.5fr 0.5fr;
+	margin-top: 10px;  
+	}
+	.topbox1{
+		margin-top: 0.1rem;
+		padding-bottom: 2rem;
+	}
+	.topbox2{
+		margin-top: 0.1rem;
+		padding-bottom: 2rem;
+	}
+	.topbox1 p{
+		margin-top: 0.1rem;
+		margin-right: 1rem;
+
+	}	 
+	.topbox2 p{
+		margin-top: 0.1rem;
+	} 
+	#geekathon{
+		margin-top: 1px;
+		margin-bottom:1px; 
+		grid-column-start: 1;
+		grid-column-end: 6; 
+		width: 100%;
+		 
+	}
+
+	}
+	.intro{ 
+		grid-template-rows: 0.1fr 0.5fr 0.5fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+
+	}
+	.intro p{
+		margin-top: 1px;
+		padding-top:0px; 
+		
+		
+	} 
+	.intro h2{ 
+		font-size: xx-large;
+		margin-bottom: 1px; 
+		 
+		padding-bottom:0.1rem;
+    }
+    .boxes{ 
+    	padding-left: 1rem;
+    	padding-right: 1rem;
+
+    } 
+} 
+@media (min-width:400px and max-width: 900px){ 
+	.topgrid{
+	display:grid; 
+	grid-template-columns: 1fr; /* the top grid is split into 3 columnsof size(1fraction of available space,0.5fr,0.5fr) and 2 rows(1fr,0.5fr)*/
+	grid-template-rows: 1fr 0.5fr 0.5fr;
+	margin-top: 10px;  
+	}
+	.topbox1{
+		margin-top: 1rem;
+	}
+	.topbox2{
+		margin-top: 1rem;
+	}
+	.topbox1 p{
+		margin-top: 0.5rem;
+		margin-right: 1rem;
+		padding-bottom: 1rem;
+	}	 
+	.topbox2 p{
+		margin-top: 0.2rem;
+	} 
+}
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
